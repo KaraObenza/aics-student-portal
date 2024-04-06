@@ -40,7 +40,7 @@ if (mysqli_num_rows($result) > 0) {
     }
 }
 
+echo "Hello World";
 
 mysqli_close($connection);
 ?>
-127.0.0.1
