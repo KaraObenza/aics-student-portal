@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegisterAdmin</title>
+    <link rel="stylesheet" href="./css/g11signup.css">
+</head>
+
+<body>
+    <div class='d-flex-justify-content-center alignt-items-center bg-primary vh-100'>
+        <div class='bg-white p-3 rounded w-25'>
+            <h2>Sign-Up</h2>
+            <form id="signupForm" method="post" action="./g11signup.php">
+                <div class='mb-3'>
+                    <label for="name"><strong>Name</strong></label>
+                    <input type="text" placeholder='Enter Name' name='name' class='form-control rounded-0'/>
+                </div>
+                <div class='mb-3'>
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" placeholder='Enter Email' name='email' class='form-control rounded-0'/>
+                </div>
+                <div class='mb-3'>
+                    <label for="password"><strong>Password</strong></label>
+                    <input type="password" placeholder='Enter Password' name='password' class='form-control rounded-0'/>
+                </div>
+                <button type='submit' class='btn btn-success w-100 rounded-0'>Sign up</button>
+                <p>Already have account?</p>
+                <a href="./g11login.html" class='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Log in</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

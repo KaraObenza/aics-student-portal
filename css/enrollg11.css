@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    color: violet;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover {
+    color: #00abf0;
+}
+
+
+.home {
+    height: 100vh;
+    background: linear-gradient(-90deg, #031540 65%, red 35%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background: #031540;
+    border-radius: 50%;
+    border: 25px solid #fff;
+    outline: 25px solid #031540;
+}
+
+.home-image img {
+    position: relative;
+    bottom: 40px;
+    max-width: 500px;
+    max-height:max-content 400px;
+
+}
+
+.home-content {
+    max-width: 600px;
+    color: #fff;
+    text-align: right;
+}
+
+.home-content h1 {
+    font-size: 55px;
+    line-height: 1.2;
+}
+
+.home-content h3 {
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: .5px #fff;
+    background-image: linear-gradient(#00abf0, #00abf0);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -410px 0;
+    animation: animateText 6s linear infinite;
+}
+
+@keyframes animateText {
+    0%,95%,100% {
+        background-position: -410px 0;
+    }
+    65%,85% {
+        background-position: 0 0;
+    }
+}
+
+.home-content p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.home-sci {
+    margin: 25px 0 40px;
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: .5s;
+}
+
+.home-sci a:hover {
+    background: #00abf0;
+    color: #fff;
+    border-color: #00abf0;
+    box-shadow: 0 0 10px #00abf0;
+}
+
+.btn {
+    padding: 12px 35px;
+    background: #00abf0;
+    border-radius: 40px;
+    font-size: 17px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 10px #00abf0;
+    transition:  .5s;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+/* Existing styles... */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Navbar styles */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #031540;
+        z-index: 99;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 28px; /* Increase font size for larger toggle button */
+        color: white; /* Make the toggle button white */
+        cursor: pointer;
+        margin-right: 20px; /* Add margin for spacing */
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    /* Home section styles */
+    .home {
+        flex-direction: column;
+        padding: 10% 5%;
+    }
+
+    .home-image {
+        width: 100%; /* Full width for smaller screens */
+        max-width: 300px; /* Limit width for larger screens */
+        height: auto;
+    }
+
+    .home-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Logo styles */
+    .logo {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+
+    /* Home content styles */
+    .home-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content h3 {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 769px) {
+    /* Navbar styles */
+    .navbar {
+        display: flex;
+        position: static;
+        background-color: transparent;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Home section styles */
+    .home {
+        flex-direction: row;
+        padding: 5%;
+    }
+
+    .home-image {
+        width: 50%; /* Half width for larger screens */
+        max-width: 500px; /* Limit width for larger screens */
+        height: auto;
+    }
+
+    .home-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Logo styles */
+    .logo {
+        font-size: 25px; /* Increase font size for larger screens */
+    }
+
+    /* Home content styles */
+    .home-content {
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .home-content h1 {
+        font-size: 55px;
+    }
+
+    .home-content h3 {
+        font-size: 40px;
+    }
+}
+

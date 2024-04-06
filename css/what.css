@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.7;
+  color: var(--color-white);
+  background: #111222;
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 5% auto; /* Centering the container */
+  text-align: center;
+  background-color: cornflowerblue;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+.choice-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #007BFF;
+  border: 1px solid #007BFF;
+  border-radius: 4px;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+      width: var(--container-width-md);
+      margin: 10% auto; /* Centering the container */
+  }
+
+  h1 {
+      font-size: 2.2rem;
+  }
+
+  button {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+  }
+
+  .back-button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+      width: var(--container-width-sm);
+      margin: 15% auto; /* Centering the container */
+  }
+
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  button {
+      padding: 0.8rem 1.5rem;
+      font-size: 0.9rem;
+  }
+
+  .back-button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+  }
+} 
+
+@media (max-width: 400px) {
+  .container {
+      width: 90%; /* Adjusting width for smaller devices */
+      margin: 20% auto; /* Centering the container */
+  }
+
+  h1 {
+      font-size: 1.2rem;
+  }
+
+  button {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.8rem;
+  }
+
+  .back-button {
+      padding: 0.3rem 0.6rem;
+      font-size: 0.7rem;
+  }
+}
